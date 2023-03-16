@@ -3,9 +3,11 @@ import styled from "styled-components";
 export const Container = styled.div`
   display: grid;
   grid-template-columns: auto;
-  gap: 0.2rem;
+  gap: 0.3rem;
   margin: 1rem auto;
-  padding: 2rem;
+  margin-right: 1rem;
+  
+  padding: 0rem;
 
   @media screen and (max-width: ${(props) => props.theme.breakpoints.md}){
     grid-template-columns: auto auto;
@@ -19,14 +21,14 @@ export const Selector = styled.button`
   align-items: center;
   justify-content: space-between;
   background: ${(props) => props.theme.colors.container};
-  color: ${(props) => props.theme.colors.text};
+  color: ${(props) => props.color};
   width: 100%;
-  min-height: 2rem;
+  min-height: 1rem;
   border: none;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   transition: background 0.3s, transform 0.3s;
-  padding: 0 1rem;
+  padding: 0.5rem;
 
   &:hover,
   &.selected{
@@ -52,7 +54,7 @@ export const Cleaner = styled.button`
   color: ${(props) => props.theme.colors.text};
   border: none;
   text-align: left;
-  padding:  1rem;
+  padding:  0.5rem;
 
   &:hover{
     color:rgba(255, 255, 255, 0.5)
